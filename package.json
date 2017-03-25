@@ -2,9 +2,6 @@
   "name": "pay-to-contract-lib",
   "version": "0.1.0",
   "description": "Pay to Contract is a contract managment library.",
-  "bin": {
-    "pay-to-contract": "./bin/pay-to-contract"
-  },
   "scripts": {
     "test": "mocha -R spec"
   },
@@ -14,10 +11,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/commerceblock/pay-to-contract"
+    "url": "https://github.com/commerceblock/pay-to-contract-lib"
   },
   "license": "GPL-3.0",
-  "bugs": "https://github.com/omarshibli/commerceblock/pay-to-contract/issues",
+  "bugs": "https://github.com/omarshibli/commerceblock/pay-to-contract-lib/issues",
   "dependencies": {
     "bitcore-lib": "^0.13.19"
   },
