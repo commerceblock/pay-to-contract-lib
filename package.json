@@ -1,5 +1,5 @@
 {
-  "name": "pay-to-contract",
+  "name": "pay-to-contract-lib",
   "version": "0.1.0",
   "description": "Pay to Contract is a contract managment library.",
   "bin": {
