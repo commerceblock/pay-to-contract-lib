@@ -10,10 +10,9 @@ describe('contract tests', () => {
     it('generateChildHash', () => {
       const childName = 'hello-world';
       const hdPublicKey = HDPublicKey.fromString('xpub6BapBbRsbWSDQT6yMCiTXsJTJfdEVvi8AaV2zuSb2x8YQ4xJ7giyS8v4n8DmVf4giyNjHwZN2jj5dpgVYTDEncvmg84AnKWoPRqMpKyPW6h');
-      const childHash = contract.generateChildHash(hdPublicKey, childName);
-      const result = new Buffer(childHash).toString('base64');
+      const result = contract.generateChildHash(hdPublicKey, childName);
 
-      assert.equal(result, '68RvUwDjq+a8UQHgRXWIVC0rm8BZdwCrn+Wc3EXim4Vnqa9eBXE2x6nkGw7dvkx1TvrpzGprXFF85SLYFb2GsA==');
+      assert.equal(result, '716582f0dbee8716fdab6f5f4f9a55185ddea1677fbaa25b312070849059deb57f5b1641657201460684afa247ea234639d6073a64c532e67a62e48681800bed');
     })
 
     it('signAndHashContract', () => {
@@ -21,7 +20,7 @@ describe('contract tests', () => {
       const hdPublicKey = HDPublicKey.fromString('xpub6BapBbRsbWSDQT6yMCiTXsJTJfdEVvi8AaV2zuSb2x8YQ4xJ7giyS8v4n8DmVf4giyNjHwZN2jj5dpgVYTDEncvmg84AnKWoPRqMpKyPW6h');
       const result = contract.signAndHashContract(hdPublicKey.publicKey, contractContent);
 
-      assert.equal(result, 'b0685e39f14731bbc04002c2491cad68052537ad144e93ffdf787bf822a0d694');
+      assert.equal(result, '4783d76602c58b243d8b73144c91e9ed1b255dd8e1c3844c32f27a96e20bbec698cfeb78c59928f2f4b0d78ac0e8f40cbb2ba935e3485e60b008b6c29c7256bc');
     })
 
     it('generateChildPublicKey', () => {
@@ -29,7 +28,7 @@ describe('contract tests', () => {
       const hdPublicKey = HDPublicKey.fromString('xpub6BapBbRsbWSDQT6yMCiTXsJTJfdEVvi8AaV2zuSb2x8YQ4xJ7giyS8v4n8DmVf4giyNjHwZN2jj5dpgVYTDEncvmg84AnKWoPRqMpKyPW6h');
       const result = contract.generateChildPublicKey(hdPublicKey, childName);
 
-      assert.equal(result.toString(), 'xpub6D8g4bu6LojJFVeTsSF5cHU2Eh1d4cbiMbptPv3h5Kdj4yXs9DYgMNW5FYrtpdBJxrcY98u3KyTiYkBhFJMNpeD1cnBu6cXgsWMAgmwcM42');
+      assert.equal(result.toString(), 'xpub7DtvkafiqGSGpRmgLg7tj2aqYVpAdBFdqFEkVZxNndB3fxnhZdi3ZkMiT7uWAPW7o5CAr8Q427E1dVvNNJTVyJtndEHpy66PWS1YpGw46ha');
     })
 
     it('generateChildPrivateKey', () => {
@@ -37,7 +36,7 @@ describe('contract tests', () => {
       const hdPrivateKey = HDPrivateKey.fromString('xprv9v8nHsbWMhYY44amHzSgUXRmrK3hxATvv7ZkV5G7LQLvXEgwt3BNQJGF1YiSRGng9zsR7D6WTDBvpZDMpU1UgEMprjtccRCPf44WLawMfnC');
       const result = contract.generateChildPrivateKey(hdPrivateKey, childName);
 
-      assert.equal(result.toString(), 'xprv9xbTn5tym8svC1h46dK6g55rMJ11kZjxz9nUrDRBqhxD1weFangerRck2BfXa4CmrqRNEXnrnaskpWeYQ61bPvQcazvpwwUscLc3Vjm1rAv');
+      assert.equal(result.toString(), 'xprvAzfYpKAnREtyFYKQfgSKJRRzaiqSTVtLXADMN2FdA6gczsb6eH69eUzuRj297JceWeveJTeGtZP4PwN9eKts3gsRqJF1Vyn5NPx3Lzog8rq');
     })
 
 })
