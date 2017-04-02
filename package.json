@@ -16,7 +16,7 @@
   "license": "GPL-3.0",
   "bugs": "https://github.com/omarshibli/commerceblock/pay-to-contract-lib/issues",
   "dependencies": {
-    "bitcore-lib": "^0.13.19",
+    "bitcore-lib": "^0.14.0",
     "lodash": "^4.17.4"
   },
   "devDependencies": {}
